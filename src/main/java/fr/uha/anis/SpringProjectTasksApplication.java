@@ -17,12 +17,9 @@ public class SpringProjectTasksApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx=SpringApplication.run(SpringProjectTasksApplication.class, args);
 		TaskRepository taskDAO =  ctx.getBean(TaskRepository.class);
-		taskDAO.save(new Task("task 1", "task 1", "TO_DO"));
-		taskDAO.save(new Task("task 2", "task 2", "TO_DO"));
-		taskDAO.save(new Task("task 3", "task 3", "TO_DO"));
-		taskDAO.save(new Task("task 4", "task 4", "TO_DO"));
-		taskDAO.save(new Task("task 5", "task 5", "IN_PROGRESS"));
-		taskDAO.save(new Task("task 6", "task 6", "DONE"));
+		taskDAO.save(new Task("Go shopping", "Go shopping", "TO_DO"));
+		taskDAO.save(new Task("Work", "Work", "IN_PROGRESS"));
+		taskDAO.save(new Task("Play the guitar", "Play the guitar", "DONE"));
 		
 	}
 
